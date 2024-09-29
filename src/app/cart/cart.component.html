@@ -1,0 +1,22 @@
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <ul class="cart-items">
+    <li *ngFor="let item of cartItems; let i = index" class="cart-item">
+      <img [src]="item.imageUrl" alt="{{ item.name }}" class="item-image">
+      <div class="item-details">
+        <h3 class="item-name">{{ item.name }}</h3>
+        <p class="item-price">{{ item.price | currency:'PHP':'symbol' }}</p>
+        <div class="quantity-controls">
+          <button (click)="decreaseQuantity(i)" class="quantity-button">-</button>
+          <span class="item-quantity">{{ item.quantity }}</span>
+          <button (click)="increaseQuantity(i)" class="quantity-button">+</button>
+        </div>
+        <button (click)="removeItem(i)" class="remove-button">Remove</button>
+      </div>
+    </li>
+  </ul>
+  <div class="cart-summary">
+    <p>Total: <span>{{ totalPrice | currency:'PHP':'symbol' }}</span></p>
+    <button class="checkout-button">Checkout</button>
+  </div>
+</div>

@@ -1,0 +1,130 @@
+/* Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Basic Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px; /* Increased padding for better spacing */
+  background-color: #4B2E2E; 
+  color: #FFFFFF;
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  left: 0;
+  z-index: 1000; 
+  height: 15%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-top: 100px; 
+  padding: 15px; /* Optional: add padding to the content */
+}
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the logo and brand name */
+}
+
+.logo img {
+  max-width: 120px;
+}
+
+.brand-name {
+  color: #FFFFFF; /* White text color */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* Navigation Styles */
+.navigation {
+  display: flex;
+  gap: 30px;
+  margin-right: 100px; /* Ensure that the links are visible */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #FFFFFF; /* Soft White */
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navigation a:hover {
+  color: #C7A17A; /* Latte Tan */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto; /* Adjust height to fit content */
+    padding: 10px;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .navigation a {
+    font-size: 18px;
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .navigation {
+    display: none; /* Hide navigation links on mobile screens */
+  }
+
+  .header .menu-toggle {
+    display: block; /* Display menu toggle button */
+    cursor: pointer;
+  }
+
+  .header .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #FFFFFF;
+    margin: 5px 0;
+  }
+}
+
+/* Menu Toggle Styles (Hidden by default) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Show navigation when menu toggle is clicked (use JavaScript to handle this) */
+.menu-open .navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

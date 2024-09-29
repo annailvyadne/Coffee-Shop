@@ -1,0 +1,27 @@
+<div class="our-products-container">
+  <h1>Our Products</h1>
+
+  <h2 class="section-header">Coffee</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let product of coffeeProducts">
+      <img [src]="product.image" [alt]="product.name" style="width:100%">
+      <div class="container">
+        <h3><b>{{ product.name }}</b></h3>
+        <p>PHP {{ product.price.toFixed(2) }}</p>
+        <button class="add-to-cart-button" (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-header">Pastry</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let product of pastryProducts">
+      <img [src]="product.image" [alt]="product.name" style="width:100%">
+      <div class="container">
+        <h3><b>{{ product.name }}</b></h3>
+        <p>PHP {{ product.price.toFixed(2) }}</p>
+        <button class="add-to-cart-button" (click)="addToCart(product)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

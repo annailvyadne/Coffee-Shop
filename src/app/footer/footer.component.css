@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+h1 {
+  width: 100%;
+  text-align: center;
+  color: #3B3B3B;
+  margin-top: 60px; /* Adjusts the space above the heading */
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #F5F0E1;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 0; /* Remove extra padding at the top */
+  padding-bottom: 20px; /* Adds padding for better layout */
+  margin: 0 auto; /* Centers the section */
+  margin-top: -100px; /* Use negative margin to move it upwards */
+  height: auto; /* Removes the fixed height to make it flexible */
+}
+
+.contact-details, .contact-form {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  color: black;
+  max-width: 400px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-details {
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #3B3B3B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #6B4F4F;
+}
+
+.social-links a {
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.creator {
+  text-align: center;
+  font-style: italic;
+  padding: 20px; /* Add some padding inside the footer */
+  background-color: #F5F0E1; /* Optional: match the background color */
+}
+
+.creator p {
+  margin: 0;
+  color: #3B3B3B; /* Optional: match the text color */
+}
